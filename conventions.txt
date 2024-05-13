@@ -1,0 +1,4 @@
+Componnets name and Componnets tsx file name should always be in pascal case
+Variables and functions should be in camel case
+Page file name should be in kabab case
+Page default function name should be in pascal case
