@@ -10,7 +10,6 @@ import {
 import { IoMdHeartEmpty } from "react-icons/io";
 import x from "/public/012-545x389 1.jpeg";
 import Slider from "react-slick";
-// import { NextSlider } from 'next-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
