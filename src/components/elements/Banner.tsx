@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Image, { StaticImageData } from "next/image";
 import Picture from "../../../public/Group_131.png";
 import Consult from "../../../public/online_medione.png";
-import Patho from "../../../public/pathology_one.png"
-import TreatM from "../../../public/treatment_one.png"
-import Clinic from "../../../public/clinic_one.png"
+import Patho from "../../../public/pathology_one.png";
+import TreatM from "../../../public/treatment_one.png";
+import Clinic from "../../../public/clinic_one.png";
 
 // interface BannerProps {
 //   imgSrc: StaticImageData;
@@ -24,7 +24,7 @@ export const Banner: React.FunctionComponent = (props) => {
     pauseOnHover: true,
   };
   return (
-    <div className="flex-auto">
+    <>
       <div>
         <Slider {...settings}>
           <div>
@@ -50,8 +50,10 @@ export const Banner: React.FunctionComponent = (props) => {
         </Slider>
       </div>
 
-      <div className="flex grid-cols-4">
-        <div className="flex h-[400px] w-[360px] flex-col justify-end border border-[#dadada] bg-white p-10">
+      {/*-----------------------------------------------------*/}
+
+      <div className="flex flex-row justify-evenly">
+        <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
           <div className="flex justify-end">
             <Image src={Consult} alt={"doctor digital consult"} />
           </div>
@@ -60,7 +62,7 @@ export const Banner: React.FunctionComponent = (props) => {
             Digital Consult
           </div>
         </div>
-        <div className="flex h-[400px] w-[360px] flex-col justify-end border border-[#dadada] bg-white p-10">
+        <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
           <div className="flex justify-end">
             <Image src={Clinic} alt={"doctor digital consult"} />
           </div>
@@ -68,7 +70,7 @@ export const Banner: React.FunctionComponent = (props) => {
             Clinic /<br /> Hospital Visit
           </div>
         </div>
-        <div className="flex h-[400px] w-[360px] flex-col justify-end border border-[#dadada] bg-white p-10">
+        <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
           <div className="flex justify-end">
             <Image src={Patho} alt={"doctor digital consult"} />
           </div>
@@ -77,7 +79,7 @@ export const Banner: React.FunctionComponent = (props) => {
             Pathology Tests
           </div>
         </div>
-        <div className="flex h-[400px] w-[360px] flex-col justify-end border border-[#dadada] bg-white p-10">
+        <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
           <div className="flex justify-end">
             <Image src={TreatM} alt={"doctor digital consult"} />
           </div>
@@ -87,7 +89,15 @@ export const Banner: React.FunctionComponent = (props) => {
           </div>
         </div>
       </div>
+      {/*-----------------------------------------------------*/}
+      <div className="flex flex-row justify-evenly">
+        <div>
+          
+        </div>
+        <div>
 
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
