@@ -9,10 +9,6 @@ import Patho from "../../../public/pathology_one.png";
 import TreatM from "../../../public/treatment_one.png";
 import Clinic from "../../../public/clinic_one.png";
 
-// interface BannerProps {
-//   imgSrc: StaticImageData;
-// }
-
 export const Banner: React.FunctionComponent = (props) => {
   var settings = {
     dots: false,
@@ -92,7 +88,7 @@ export const Banner: React.FunctionComponent = (props) => {
       {/*-----------------------------------------------------*/}
       <div className="flex flex-row justify-evenly">
         <div>
-          
+
         </div>
         <div>
 
