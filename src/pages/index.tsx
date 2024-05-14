@@ -1,7 +1,11 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
+
+import HeadNav from "~/components/layout/HeadNav";
+
 import { Banner } from "../components/elements/Banner";
+
 import { api } from "~/utils/api";
 import ArticleHeading, { Heading } from "~/components/elements/Heading";
 
