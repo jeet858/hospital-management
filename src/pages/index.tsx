@@ -8,13 +8,23 @@ import { Banner } from "../components/elements/Banner";
 
 import { api } from "~/utils/api";
 import ArticleHeading, { Heading } from "~/components/elements/Heading";
-
-export default function Home() {
-  const hello = api.post.hello.useQuery({ text: "from tRPC" });
-
+import Bottom from "~/components/layout/Bottom";
+import ShowAppointment, {
+  AppointmentBook,
+} from "~/components/elements/Appointments";
+import ShowArticle, { Article } from "~/components/elements/Article";
+import React from "react";
+const Home: React.FunctionComponent = () => {
   return (
     <>
+      <HeadNav />
       <Banner />
+      <ShowAppointment />
+      <ArticleHeading />
+      <ShowArticle />
+      <Bottom />
     </>
   );
-}
+};
+
+export default Home;
