@@ -1,7 +1,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
-import { Banner } from "../components/elements/Banner";
+import { HomePageBanner } from "../components/elements/HomePageBanner";
 import { api } from "~/utils/api";
 import ArticleHeading, { Heading } from "~/components/elements/Heading";
 
@@ -10,7 +10,8 @@ export default function Home() {
 
   return (
     <>
-      <Banner />
+      <HomePageBanner />
     </>
   );
 }
+
