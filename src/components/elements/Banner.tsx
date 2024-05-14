@@ -15,12 +15,12 @@ export const Banner: React.FunctionComponent = (props) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
   };
   return (
-    <>
+    <div className="w-full max-w-full overflow-x-hidden">
       <div>
         <Slider {...settings}>
           <div>
@@ -45,8 +45,6 @@ export const Banner: React.FunctionComponent = (props) => {
           </div>
         </Slider>
       </div>
-
-      {/*-----------------------------------------------------*/}
 
       <div className="flex flex-row justify-evenly">
         <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
@@ -87,13 +85,9 @@ export const Banner: React.FunctionComponent = (props) => {
       </div>
       {/*-----------------------------------------------------*/}
       <div className="flex flex-row justify-evenly">
-        <div>
-
-        </div>
-        <div>
-
-        </div>
+        <div></div>
+        <div></div>
       </div>
-    </>
+    </div>
   );
 };
