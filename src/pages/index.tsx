@@ -14,15 +14,19 @@ import ShowAppointment, {
 } from "~/components/elements/Appointments";
 import ShowArticle, { Article } from "~/components/elements/Article";
 import React from "react";
+import MainPageTemplate from "~/components/templates/MainPageTemplate";
 const Home: React.FunctionComponent = () => {
   return (
     <>
-      <HeadNav />
+      <MainPageTemplate>
+        <ShowAppointment />
+        <ArticleHeading />
+        <ShowArticle />
+      </MainPageTemplate>
+      {/* <HeadNav />
       <Banner />
-      <ShowAppointment />
-      <ArticleHeading />
-      <ShowArticle />
-      <Bottom />
+
+      <Bottom /> */}
     </>
   );
 };
