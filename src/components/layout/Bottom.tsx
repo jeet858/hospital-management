@@ -107,9 +107,13 @@ const Bottom: React.FunctionComponent = () => {
       </div>
       <div className="relative flex h-[60vh] w-full flex-row items-center justify-around bg-[#3D4461] text-white">
         <div className="absolute -top-[4rem] flex h-[8rem] w-full justify-center">
-          <div className="flex h-full w-[40%] flex-row justify-between rounded-l-[5rem] rounded-r-[5rem] bg-white px-[1.5rem]">
+          <div className="flex h-full w-[40%] flex-row justify-between rounded-l-[5rem] rounded-r-[5rem] bg-white px-[1.2rem]">
             <div className="flex w-[34%] flex-row items-center">
-              <img src="img-01 1.png" className="h-[3.8rem] w-[4rem]" alt="" />
+              <img
+                src="img-01 1.png"
+                className="h-[3.8rem] w-[4.5rem]"
+                alt=""
+              />
               <div className="flex h-[60%] items-center border-l-4 border-[#D9D9D9]">
                 <div className="flex h-[80%] flex-col justify-between pl-[.5rem]">
                   <span className=" text-[#7E7E7E]">Emergency Call</span>

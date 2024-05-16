@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { FaLocationDot, FaCalendar } from "react-icons/fa6";
-import Image, { type StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from "next/image";
 import { FaBrain } from "react-icons/fa";
 import a from "/public/20(1).jpeg";
 import Slider from "react-slick";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { settings } from ".eslintrc.cjs";
 
 interface AppointmentBookProps {
@@ -16,14 +16,14 @@ interface AppointmentBookProps {
 }
 
 export const AppointmentBook: React.FunctionComponent<AppointmentBookProps> = (
-  props
+  props,
 ) => {
   const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return (
-    <div>
-      <div className="flex  w-[261px] h-fit flex-col">
-        <div className="w-[261px] h-fit">
-          <Image src={props.imageSrc} className="w-full h-full" alt="" />
+    <div className="flex justify-center">
+      <div className="flex h-fit w-[261px] flex-col ">
+        <div className="h-fit w-[261px]">
+          <Image src={props.imageSrc} className="h-full w-full" alt="" />
         </div>
         <div className="space-y-[1%]  border border-zinc-300 p-[2%]">
           <div className="font-['Lato'] text-xl font-medium text-black">
@@ -40,7 +40,7 @@ export const AppointmentBook: React.FunctionComponent<AppointmentBookProps> = (
           </div>
           <div className="flex flex-row items-center space-x-1">
             <FaCalendar style={{ color: "#7E7E7E" }} />
-            <div className="font-['Lato'] w-full text-xs font-normal flex flex-row justify-between">
+            <div className="flex w-full flex-row justify-between font-['Lato'] text-xs font-normal">
               {weekDays.map((item, index) => (
                 <div
                   key={index}
@@ -53,9 +53,9 @@ export const AppointmentBook: React.FunctionComponent<AppointmentBookProps> = (
               ))}
             </div>
           </div>
-          <div className="w-full h-fit  flex justify-center">
-            <button className="rounded w-24 h-10 border-2 border-sky-400">
-              <div className="text-black text-[15px] font-normal font-['Inter']">
+          <div className="flex h-fit  w-full justify-center">
+            <button className="h-10 w-24 rounded border-2 border-sky-400">
+              <div className="font-['Inter'] text-[15px] font-normal text-black">
                 Book Now
               </div>
             </button>
@@ -67,51 +67,50 @@ export const AppointmentBook: React.FunctionComponent<AppointmentBookProps> = (
 };
 
 function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
 
 const ShowAppointment: React.FunctionComponent = () => {
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        nextArrow: 
-          <SampleNextArrow
-            className={undefined}
-            style={undefined}
-            onClick={undefined}
-          />
-        ,
-        prevArrow: 
-          <SamplePrevArrow
-            className={undefined}
-            style={undefined}
-            onClick={undefined}
-          />
-        ,
-      };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    nextArrow: (
+      <SampleNextArrow
+        className={undefined}
+        style={undefined}
+        onClick={undefined}
+      />
+    ),
+    prevArrow: (
+      <SamplePrevArrow
+        className={undefined}
+        style={undefined}
+        onClick={undefined}
+      />
+    ),
+  };
 
   const appointment = [
     {
@@ -146,8 +145,8 @@ const ShowAppointment: React.FunctionComponent = () => {
     },
   ];
   return (
-    <div className="w-screen h-fit">
-      <div className="flex h-[22rem] w-full flex-row space-x-[2%] mt-16">
+    <div className="h-fit w-screen">
+      <div className="mt-16 flex h-[22rem] w-full flex-row space-x-[2%]">
         <div className="flex h-[22rem] w-[20%] flex-col items-center justify-center space-y-[5%] bg-blue-50 p-5 ">
           <FaBrain
             style={{ color: "#328BDD", width: "45px", height: "45px" }}
@@ -170,20 +169,20 @@ const ShowAppointment: React.FunctionComponent = () => {
         </div>
 
         <div className="w-[75%]">
-        <Slider {...settings}>
-        {appointment?.map((item, index) => {
-          return (
-            <Fragment key={index}>
-              <AppointmentBook
-                imageSrc={item.imageSrc}
-                name={item.name}
-                degree={item.degree}
-                location={item.location}
-              />
-            </Fragment>
-          );
-        })}
-        </Slider>
+          <Slider {...settings}>
+            {appointment?.map((item, index) => {
+              return (
+                <Fragment key={index}>
+                  <AppointmentBook
+                    imageSrc={item.imageSrc}
+                    name={item.name}
+                    degree={item.degree}
+                    location={item.location}
+                  />
+                </Fragment>
+              );
+            })}
+          </Slider>
         </div>
       </div>
     </div>

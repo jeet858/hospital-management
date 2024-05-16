@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 const HeadNav: React.FunctionComponent = () => {
   return (
-    <div className="flex h-[22%] flex-col">
+    <div className="flex h-[13vh] flex-col">
       <div className="flex flex-row justify-between bg-[#F4F8FB]  px-[6rem]">
         <div className="flex flex-col">
           <span className="text-[#7E7E7E]">Emergency Help?</span>
@@ -30,7 +30,7 @@ const HeadNav: React.FunctionComponent = () => {
           />
         </div>
         <div className="flex flex-row items-center space-x-[4rem] text-lg">
-          <span className="font-semibold">Hone</span>
+          <span className="font-semibold">Home</span>
           <span className="font-semibold">About Us</span>
           <span className="flex items-center font-semibold">
             Admin <FaCaretDown />
