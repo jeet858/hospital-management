@@ -10,8 +10,8 @@ import {
 import { IoMdHeartEmpty } from "react-icons/io";
 import x from "/public/012-545x389 1.jpeg";
 import Slider from "react-slick";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface ArticleProps {
   image: StaticImageData;
@@ -20,7 +20,7 @@ interface ArticleProps {
   name: string;
 }
 
-export const Article: React.FunctionComponent<ArticleProps> = (props) => {
+export const ArticleTiles: React.FunctionComponent<ArticleProps> = (props) => {
   return (
     <div className="h-fit w-[400px]">
       <div className="flex h-fit w-[400px] flex-col ">
@@ -84,29 +84,36 @@ export const Article: React.FunctionComponent<ArticleProps> = (props) => {
   );
 };
 
-function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
+const Article: React.FunctionComponent = () => {
+  function SampleNextArrow(props: {
+    className: any;
+    style: any;
+    onClick: any;
+  }) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block" }}
+        onClick={onClick}
+      />
+    );
+  }
 
-function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
-
-const ShowArticle: React.FunctionComponent = () => {
+  function SamplePrevArrow(props: {
+    className: any;
+    style: any;
+    onClick: any;
+  }) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block" }}
+        onClick={onClick}
+      />
+    );
+  }
   const settings = {
     dots: true,
     infinite: true,
@@ -114,23 +121,23 @@ const ShowArticle: React.FunctionComponent = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: 
+    nextArrow: (
       <SampleNextArrow
         className={undefined}
         style={undefined}
         onClick={undefined}
       />
-    ,
-    prevArrow: 
+    ),
+    prevArrow: (
       <SamplePrevArrow
         className={undefined}
         style={undefined}
         onClick={undefined}
       />
-    ,
+    ),
   };
 
-  const article = [
+  const articleData = [
     {
       imageSrc: x,
       text: "Alcohol may be less harmful for people over 50",
@@ -157,22 +164,23 @@ const ShowArticle: React.FunctionComponent = () => {
     },
   ];
   return (
-    <div className="h-screen w-screen flex justify-center">
+    <div className="flex h-screen w-screen justify-center">
       <div className="w-[80%]">
-      <Slider {...settings}>
-        {article?.map((item, index) => (
-          <div key={index}>
-            <Article
-              image={item.imageSrc}
-              text={item.text}
-              date={item.date}
-              name={item.name}
-            />
-          </div>
-        ))}
-      </Slider></div>
+        <Slider {...settings}>
+          {articleData?.map((item, index) => (
+            <div key={index}>
+              <ArticleTiles
+                image={item.imageSrc}
+                text={item.text}
+                date={item.date}
+                name={item.name}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
 
-export default ShowArticle;
+export default Article;
