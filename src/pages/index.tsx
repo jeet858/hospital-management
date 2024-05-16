@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import HeadNav from "~/components/layout/HeadNav";
 
-import { Banner } from "../components/elements/Banner";
+// import { Banner } from "../components/elements/Banner";
 
 
 import { HomePageBanner } from "../components/elements/HomePageBanner";
@@ -22,25 +22,17 @@ import MainPageTemplate from "~/components/templates/MainPageTemplate";
 const Home: React.FunctionComponent = () => {
   return (
     <>
-
       <MainPageTemplate>
-        <ShowAppointment />
-        <ArticleHeading />
-        <ShowArticle />
+        {/* <ShowAppointment /> */}
+        {/* <ArticleHeading /> */}
+        {/* <ShowArticle /> */}
       </MainPageTemplate>
-      {/* <HeadNav />
-      <Banner />
-
-      <Bottom /> */}
     </>
   );
 };
 
 export default Home;
+    
 
-      <HomePageBanner />
-    </>
-  );
-}
 
 
