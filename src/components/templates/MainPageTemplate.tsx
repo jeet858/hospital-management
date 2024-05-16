@@ -1,7 +1,7 @@
 import React from "react";
 import HeadNav from "../layout/HeadNav";
 import Bottom from "../layout/Bottom";
-import { Banner } from "../elements/Banner";
+import HomePageBanner from "../elements/HomePageBanner";
 
 interface MainPageTemplateProps {
   children?: JSX.Element | JSX.Element[];
@@ -10,7 +10,7 @@ const MainPageTemplate: React.FC<MainPageTemplateProps> = (props) => {
   return (
     <div className="flex h-fit w-full flex-col overflow-x-hidden">
       <HeadNav />
-      <Banner />
+      <HomePageBanner />
       <div className="flex h-fit w-full flex-col">{props.children}</div>
       <Bottom />
     </div>
