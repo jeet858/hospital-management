@@ -9,7 +9,7 @@ import Patho from "../../../public/pathology_one.png";
 import TreatM from "../../../public/treatment_one.png";
 import Clinic from "../../../public/clinic_one.png";
 
-export const Banner: React.FunctionComponent = (props) => {
+export const HomePageBanner: React.FunctionComponent = (props) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -45,8 +45,6 @@ export const Banner: React.FunctionComponent = (props) => {
           </div>
         </Slider>
       </div>
-
-      {/*-----------------------------------------------------*/}
 
       <div className="flex flex-row justify-evenly">
         <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
