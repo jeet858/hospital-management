@@ -15,19 +15,11 @@ interface AppointmentBookProps {
   location: string;
 }
 
-
 export const AppointmentTiles: React.FunctionComponent<AppointmentBookProps> = (
-
-export const AppointmentBook: React.FunctionComponent<AppointmentBookProps> = (
-
   props,
 ) => {
   const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return (
-
-    <div>
-      <div className="flex  h-fit w-[261px] flex-col">
-
     <div className="flex justify-center">
       <div className="flex h-fit w-[261px] flex-col ">
         <div className="h-fit w-[261px]">
@@ -96,6 +88,31 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
   );
 }
 
+// const Appointment: React.FunctionComponent = () => {
+//   const settings = {
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//     initialSlide: 0,
+//     nextArrow: (
+//       <SampleNextArrow
+//         className={undefined}
+//         style={undefined}
+//         onClick={undefined}
+//       />
+//     ),
+//     prevArrow: (
+//       <SamplePrevArrow
+//         className={undefined}
+//         style={undefined}
+//         onClick={undefined}
+//       />
+//     ),
+//   };
+// }
+
 const Appointment: React.FunctionComponent = () => {
   const settings = {
     dots: true,
@@ -121,32 +138,6 @@ const Appointment: React.FunctionComponent = () => {
   };
 
   const appointmentData = [
-
-const ShowAppointment: React.FunctionComponent = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    nextArrow: (
-      <SampleNextArrow
-        className={undefined}
-        style={undefined}
-        onClick={undefined}
-      />
-    ),
-    prevArrow: (
-      <SamplePrevArrow
-        className={undefined}
-        style={undefined}
-        onClick={undefined}
-      />
-    ),
-  };
-
-  const appointment = [
     {
       imageSrc: a,
       name: "Flores Emily",
@@ -204,12 +195,10 @@ const ShowAppointment: React.FunctionComponent = () => {
 
         <div className="w-[75%]">
           <Slider {...settings}>
-
-            {appointment?.map((item, index) => {
+            {appointmentData?.map((item, index) => {
               return (
                 <Fragment key={index}>
-                  <AppointmentBook
-
+                  <AppointmentTiles
                     imageSrc={item.imageSrc}
                     name={item.name}
                     degree={item.degree}

@@ -2,11 +2,9 @@ import React from "react";
 import HeadNav from "../layout/HeadNav";
 import Bottom from "../layout/Bottom";
 
-import { HomePageBanner } from "../elements/HomePageBanner";
 import Contact from "../elements/Contact";
 
 import HomePageBanner from "../elements/HomePageBanner";
-
 
 interface MainPageTemplateProps {
   children?: JSX.Element | JSX.Element[];
@@ -18,13 +16,11 @@ const MainPageTemplate: React.FC<MainPageTemplateProps> = (props) => {
 
       {/* <HomePageBanner /> */}
       {/* <div className="flex h-fit w-full flex-col">{props.children}</div> */}
-      <Contact/>
 
       <HomePageBanner />
       <div className="flex h-fit w-full flex-col">{props.children}</div>
 
       <Bottom />
-      
     </div>
   );
 };

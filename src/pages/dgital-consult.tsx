@@ -4,14 +4,14 @@ import OurSpaciality from "~/components/elements/OurSpaciality";
 import ShowAppointment from "~/components/elements/Appointments";
 import Feedback from "~/components/elements/Feedback";
 import HeadNav from "~/components/layout/HeadNav";
-import { Banner } from "~/components/elements/Banner";
+import HomePageBanner from "~/components/elements/HomePageBanner";
 import Bottom from "~/components/layout/Bottom";
 const DigitalConsult: React.FunctionComponent = () => {
   return (
     <div className="flex h-[320vh] w-full flex-col space-y-[7%] overflow-x-hidden pl-[4.3rem] pr-[1.5rem]">
       <div className="flex h-fit w-full flex-col ">
         <HeadNav />
-        <Banner />
+        <HomePageBanner />
         <div className="flex flex-row items-center space-x-2 py-[1rem] font-['Lato'] hover:cursor-pointer">
           <span className=" text-[#3B4561]">Home</span>
           <img src="Vector.png" className="h-[.5rem] text-[#3B4561]" alt="" />
