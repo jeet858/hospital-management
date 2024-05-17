@@ -8,7 +8,7 @@ interface MainPageTemplateProps {
 }
 const MainPageTemplate: React.FC<MainPageTemplateProps> = (props) => {
   return (
-    <div className="flex h-fit w-full flex-col overflow-x-hidden">
+    <div className="flex h-fit w-full flex-col overflow-x-hidden ">
       <HeadNav />
       <HomePageBanner />
       <div className="flex h-fit w-full flex-col">{props.children}</div>
