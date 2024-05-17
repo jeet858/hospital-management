@@ -19,31 +19,34 @@ export const HomePageBanner: React.FunctionComponent = (props) => {
     autoplaySpeed: 5000,
     pauseOnHover: true,
   };
+  const bannerData = [
+    { imgSrc: Picture },
+    { imgSrc: Picture },
+    { imgSrc: Picture },
+    { imgSrc: Picture },
+    { imgSrc: Picture },
+  ];
   return (
     <div className="w-full max-w-full overflow-x-hidden">
       <div>
         <Slider {...settings}>
-          <div>
-            <div className="relative">
-              <Image src={Picture} alt="pic1" className="w-full h-auto"/>
-              <button className="absolute bottom-0 right-0 m-4 bg-blue-500 text-white px-4 py-2 rounded z-10">Hello</button>
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image src={Picture} alt="pic2" />
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image src={Picture} alt="pic3" />
-            </div>
-          </div>
-          <div>
-            <div>
-              <Image src={Picture} alt="pic4" />
-            </div>
-          </div>
+          {bannerData.map((item, index) => {
+            return (
+              <BannerTiles
+                imgSrc={item.imgSrc}
+                key={index}
+                buttonOneText={"Sign Up"}
+                buttonTwoText={"New Appointment"}
+                buttonOneOnClick={(e) => {
+                  e.preventDefault(); //this function prevents the refresh of the page whenever button is clicked.
+                  console.log("abc");
+                }}
+                buttonTwoOnClick={() => {
+                  console.log("def");
+                }}
+              />
+            );
+          })}
         </Slider>
       </div>
 
@@ -61,33 +64,88 @@ export const HomePageBanner: React.FunctionComponent = (props) => {
           <div className="flex justify-end">
             <Image src={Clinic} alt={"doctor digital consult"} />
           </div>
-          <div className="text-[32px] font-semibold text-[#3b4561]">
+          <a href="#" className="text-[32px] font-semibold text-[#3b4561]">
             Clinic /<br /> Hospital Visit
-          </div>
+          </a>
         </div>
         <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
           <div className="flex justify-end">
             <Image src={Patho} alt={"doctor digital consult"} />
           </div>
-          <div className="break-normal text-[32px] font-semibold text-[#f36562]">
+          <a href="#" className="break-normal text-[32px] font-semibold text-[#f36562]">
             Book <br />
             Pathology Tests
-          </div>
+          </a>
         </div>
         <div className="flex h-[400px] w-full flex-col justify-end border border-[#dadada] bg-white p-10">
           <div className="flex justify-end">
             <Image src={TreatM} alt={"doctor digital consult"} />
           </div>
-          <div className="text-[32px] font-semibold text-[#3b4561]">
+          <a href="#" className="text-[32px] font-semibold text-[#3b4561]">
             Buy <br />
             Medicines
-          </div>
+          </a>
         </div>
       </div>
       {/*-----------------------------------------------------*/}
-      <div className="flex flex-row justify-evenly">
-        <div></div>
-        <div></div>
+      <div className="flex flex-row justify-evenly py-20">
+        <div>
+          <span>
+            <p>Bring Care to Your</p>
+            <p>Home With One Click </p>
+            <p>
+              Lorem ipsum dolor amet consectetur adipisicing elitiuim sete
+              <br />
+              eiusmod tempor incididunt ut labore etnalom dolore magn aiqua
+            </p>
+          </span>
+          <div className="flex">
+            <button className=" text border border-sky-500 bg-white px-6 py-2 font-bold text-black">
+              About Us
+            </button>
+            <div className="px-10">
+              <button className=" bg-blue-500 px-6 py-2 font-bold text-white  shadow-md">
+                Contact
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>aaaaaaaaaaaaaaa</div>
+      </div>
+    </div>
+  );
+};
+
+interface BannerTilesProps {
+  imgSrc: string | StaticImageData;
+  buttonOneText: string;
+  buttonTwoText: string;
+  buttonOneOnClick: React.MouseEventHandler<HTMLButtonElement>;
+  buttonTwoOnClick: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const BannerTiles: React.FunctionComponent<BannerTilesProps> = (props) => {
+  return (
+    <div className="flex flex-col">
+      <Image src={Picture} alt="pic1" className="h-auto w-full" />
+      <div className="relative flex flex-col">
+        <div className="flex flex-row">
+          <button
+            className="absolute bottom-0 right-60 z-10 m-4 rounded-lg border border-black bg-white px-16 py-3.5 text-black"
+            onClick={(e) => {
+              console.log("First Button");
+            }}
+          >
+            {props.buttonOneText}
+          </button>
+          <button
+            className="absolute bottom-0 right-0 z-10 m-4 rounded-lg border border-black bg-white px-8 py-3.5 text-black"
+            onClick={() => {console.log("Second Button");
+            }}
+          >
+            {props.buttonTwoText}
+          </button>
+        </div>
       </div>
     </div>
   );

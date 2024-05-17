@@ -7,14 +7,15 @@ import Contact from "../elements/Contact";
 interface MainPageTemplateProps {
   children?: JSX.Element | JSX.Element[];
 }
+
 const MainPageTemplate: React.FC<MainPageTemplateProps> = (props) => {
   return (
     <div className="flex h-fit w-full flex-col overflow-x-hidden">
-      <HeadNav />
-      {/* <HomePageBanner /> */}
+      {/* <HeadNav /> */}
+      <HomePageBanner />
       {/* <div className="flex h-fit w-full flex-col">{props.children}</div> */}
-      <Contact/>
-      <Bottom />
+      {/* <Contact/> */}
+      {/* <Bottom /> */}
       
     </div>
   );
