@@ -9,7 +9,7 @@ import Patho from "../../../public/pathology_one.png";
 import TreatM from "../../../public/treatment_one.png";
 import Clinic from "../../../public/clinic_one.png";
 
-export const HomePageBanner: React.FunctionComponent = (props) => {
+const HomePageBanner: React.FunctionComponent = (props) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -92,3 +92,5 @@ export const HomePageBanner: React.FunctionComponent = (props) => {
     </div>
   );
 };
+
+export default HomePageBanner;
