@@ -7,18 +7,20 @@ import HeadNav from "~/components/layout/HeadNav";
 import HomePageBanner from "../components/elements/HomePageBanner";
 
 import { api } from "~/utils/api";
-import Heading from "~/components/elements/Heading";
+import Heading from "~/components/elements/TextPattern";
 import Bottom from "~/components/layout/Bottom";
 import Appointment from "~/components/elements/Appointments";
 import Article from "~/components/elements/Article";
 import React from "react";
 import MainPageTemplate from "~/components/templates/MainPageTemplate";
+import TextPattern from "~/components/elements/TextPattern";
 const Home: React.FunctionComponent = () => {
   return (
     <>
       <MainPageTemplate>
         <Appointment />
-        <Heading firstHeading="" secondHeading1="" secondHeading2="" text="" />
+        <TextPattern firstHeading="Read Professional Articles" secondHeading1="Latest" secondHeading2="Articles" text="Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod tempor incididunt ut 
+        labore etnalom dolore magna aliqua udiminimate veniam quis norud." />
 
         <Article />
       </MainPageTemplate>

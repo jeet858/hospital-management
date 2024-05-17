@@ -28,7 +28,7 @@ interface Iprops {
   secondHeading2?: string;
   text?: string;
 }
-const Heading: React.FunctionComponent<Iprops> = (props) => {
+const TextPattern: React.FunctionComponent<Iprops> = (props) => {
   return (
     <div>
       <div className="flex h-fit w-full flex-col items-center justify-center space-y-[4%] bg-transparent py-[2%]">
@@ -58,4 +58,4 @@ const Heading: React.FunctionComponent<Iprops> = (props) => {
   );
 };
 
-export default Heading;
+export default TextPattern;
