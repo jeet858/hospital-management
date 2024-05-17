@@ -15,7 +15,7 @@ const HomePageBanner: React.FunctionComponent = (props) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: true,
   };
@@ -24,8 +24,9 @@ const HomePageBanner: React.FunctionComponent = (props) => {
       <div>
         <Slider {...settings}>
           <div>
-            <div>
-              <Image src={Picture} alt="pic1" />
+            <div className="relative">
+              <Image src={Picture} alt="pic1" className="w-full h-auto"/>
+              <button className="absolute bottom-0 right-0 m-4 bg-blue-500 text-white px-4 py-2 rounded z-10">Hello</button>
             </div>
           </div>
           <div>

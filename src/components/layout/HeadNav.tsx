@@ -30,7 +30,7 @@ const HeadNav: React.FunctionComponent = () => {
           />
         </div>
         <div className="flex flex-row items-center space-x-[4rem] text-lg">
-          <span className="font-semibold">Hone</span>
+          <span className="font-semibold">Home</span>
           <span className="font-semibold">About Us</span>
           <span className="flex items-center font-semibold">
             Admin <FaCaretDown />

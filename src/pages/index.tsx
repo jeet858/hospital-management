@@ -4,7 +4,13 @@ import Link from "next/link";
 
 import HeadNav from "~/components/layout/HeadNav";
 
-import HomePageBanner from "../components/elements/HomePageBanner";
+
+// import { Banner } from "../components/elements/Banner";
+
+
+import { HomePageBanner } from "../components/elements/HomePageBanner";
+
+
 
 import { api } from "~/utils/api";
 import Heading from "~/components/elements/TextPattern";
@@ -18,18 +24,21 @@ const Home: React.FunctionComponent = () => {
   return (
     <>
       <MainPageTemplate>
+
+        {/* <ShowAppointment /> */}
+        {/* <ArticleHeading /> */}
+        {/* <ShowArticle /> */}
+
         <Appointment />
         <TextPattern firstHeading="Read Professional Articles" secondHeading1="Latest" secondHeading2="Articles" text="Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod tempor incididunt ut 
         labore etnalom dolore magna aliqua udiminimate veniam quis norud." />
 
         <Article />
-      </MainPageTemplate>
-      {/* <HeadNav />
-      <Banner />
 
-      <Bottom /> */}
+      </MainPageTemplate>
     </>
   );
 };
 
 export default Home;
+
