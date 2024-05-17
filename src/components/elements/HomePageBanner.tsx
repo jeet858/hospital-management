@@ -20,7 +20,7 @@ const HomePageBanner: React.FunctionComponent = (props) => {
     pauseOnHover: true,
   };
   return (
-    <div className="w-full max-w-full overflow-x-hidden">
+    <div className="h-fit w-full max-w-full overflow-x-hidden">
       <div>
         <Slider {...settings}>
           <div>
